@@ -13,3 +13,11 @@
 .nav-item.border-right {
   border-color: #D98F89 !important;
 }
+
+footer {
+  background-color: #F2E4D8;
+}
+
+.footer-copyright {
+  background-color: #D98F89;
+}
