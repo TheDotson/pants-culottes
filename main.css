@@ -1,3 +1,15 @@
-body {
-  background-color: blue;
+.navbar {
+  font-family: 'Amiri', serif;
+}
+
+.navbar {
+  background-color: #F2E4D8;
+}
+
+.nav-link {
+  color: #59121F;
+}
+
+.nav-item.border-right {
+  border-color: #D98F89 !important;
 }
