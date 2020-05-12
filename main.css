@@ -19,3 +19,18 @@ footer {
 .footer-copyright {
   background-color: #D98F89;
 }
+
+.historyHead {
+  height: 400px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.firstCulottes {
+  height: 200px;
+  float: right;
+  display: block;
+  flex-wrap: wrap;
+}
