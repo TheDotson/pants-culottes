@@ -1,9 +1,6 @@
 .navbar {
-  font-family: 'Amiri', serif;
-}
-
-.navbar {
   background-color: #F2E4D8;
+  font-family: 'Amiri', serif;
 }
 
 .nav-link {
@@ -12,4 +9,13 @@
 
 .nav-item.border-right {
   border-color: #D98F89 !important;
+}
+
+footer {
+  background-color: #F2E4D8;
+  font-family: 'Amiri', serif;
+}
+
+.footer-copyright {
+  background-color: #D98F89;
 }
