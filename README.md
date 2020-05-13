@@ -40,9 +40,6 @@ You should not need to modify nither the navbar nor the footer. Instead, place a
             <a class="nav-link" href="history.html">History</a>
           </li>
           <li class="nav-item border-right px-2">
-            <a class="nav-link" href="#">Fashion Shows</a>
-          </li>
-          <li class="nav-item border-right px-2">
             <a class="nav-link" href="#">About Us</a>
           </li>
           <li class="nav-item px-2">
