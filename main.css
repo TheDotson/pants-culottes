@@ -23,6 +23,7 @@ body {
 /* Original text overlay */
 .overlay-image .text {
   /* color: #fff; */
+  color: #BF9E39;
   font-size: 80px;
   /* line-height: 1.5em; */
   text-shadow: 2px 2px 2px #FFF;
@@ -36,6 +37,7 @@ body {
 }
 
 .overlay-image .tagline {
+  color: #59121F;
   font-size: 40px;
   text-shadow: 2px 2px 2px #FFF;
   text-align: center;
