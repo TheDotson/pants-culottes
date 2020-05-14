@@ -167,7 +167,4 @@ footer {
 
 .main-container {
   min-height: calc(100vh - 217px);
-  overflow: hidden;
-  display: block;
-  position: relative;
 }
