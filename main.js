@@ -32,7 +32,7 @@ const articleCardBuilder = (arr) => {
   for (let i = 0; i < arr.length; i++) {
       domString += `
     <div class="col-5 mx-auto">
-    <div class="card mb-3">
+    <div class="card mt-3">
       <div class="card-body p-2">
         <h5 class="card-title">${arr[i].headline}</h5>
         <p class="card-text">${arr[i].publishDate}</p>
