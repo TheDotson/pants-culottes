@@ -63,3 +63,21 @@ footer {
   padding-top: 10px;
   font-family: 'Rye', cursive;
 }
+
+/* Shopping Page */
+
+.shopHeader {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Rye', cursive;
+  color: #bf9e39;  
+}
+
+
+
+.btnShop {
+  background-color: #59121f;
+  color: white;
+  font-family: 'Amiri', serif;
+  min-width: 110px;
+}
