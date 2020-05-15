@@ -184,10 +184,12 @@ footer {
 
 .card-img {
   height: 550px;
+  border-radius: 10px;
 }
 
 .card-img-sm {
   height: 265px;
+  border-radius: 10px;
 }
 
 /* text css for site theme */
