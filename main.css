@@ -168,3 +168,27 @@ footer {
 .main-container {
   min-height: calc(100vh - 217px);
 }
+
+.headline {
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+}
+
+.testbody {
+  /* background-color: #D98F89; */
+  background-color: #59121F;
+}
+
+.card {
+  /* background-color: #F2E4D8; */
+  /* background-color: #59121F; */
+  /* background-color: #BF9E39; */
+  background-color: #D98F89;
+  font-family: 'Rye', cursive;
+  /* color: black; */
+}
+
+.card-text {
+  font-family: 'Amiri', serif;
+  /* color: black; */
+}
