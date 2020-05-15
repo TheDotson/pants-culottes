@@ -50,10 +50,12 @@ You should not need to modify nither the navbar nor the footer. Instead, place a
     </div>
   </nav>
 
+  <div class="main-container">
+    <h1>Landing Page</h1> <!-- CUSTOMIZE THIS FOR YOUR PAGE -->
 
-  <h1>Landing Page</h1> <!-- CUSTOMIZE THIS FOR YOUR PAGE -->
+    <!-- YOUR CONTENT GOES HERE-->
+  </div>
 
-  <!-- YOUR CONTENT GOES HERE-->
 
   <!-- FOOTER -->
   <footer class="pt-3 my-md-5 border-top">

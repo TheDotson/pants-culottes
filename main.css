@@ -122,6 +122,7 @@ body {
 footer {
   background-color: #F2E4D8;
   font-family: 'Amiri', serif;
+  height: 140px;
 }
 
 .footer-copyright {
@@ -162,4 +163,8 @@ footer {
   text-align: center;
   padding-top: 10px;
   font-family: 'Rye', cursive;
+}
+
+.main-container {
+  min-height: calc(100vh - 217px);
 }
