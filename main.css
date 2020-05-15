@@ -165,6 +165,7 @@ footer {
   font-family: 'Rye', cursive;
 }
 
+/* text css for site theme */
 .main-container {
   min-height: calc(100vh - 217px);
 }
@@ -175,20 +176,39 @@ footer {
 }
 
 .testbody {
-  /* background-color: #D98F89; */
   background-color: #59121F;
 }
 
-.card {
-  /* background-color: #F2E4D8; */
-  /* background-color: #59121F; */
-  /* background-color: #BF9E39; */
+.testcard {
   background-color: #D98F89;
   font-family: 'Rye', cursive;
-  /* color: black; */
 }
 
-.card-text {
+.testCardText {
   font-family: 'Amiri', serif;
-  /* color: black; */
+}
+
+  /* shopping page css below */
+.shopHeader {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Rye', cursive;
+  color : #BF9E39;
+}
+
+.btnShop {
+  background-color: #59121F;
+  color: white;
+  font-family: 'Amiri', serif;
+}
+
+.btnDetails {
+  background-color: #BF9E39;
+  color: black;
+  font-family: 'Rye', cursive;
+  font-weight: bold;  
+}
+
+.adj {
+  min-height: 330px;
 }
