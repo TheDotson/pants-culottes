@@ -150,6 +150,7 @@ const articles = [
 
 const printToDom = (selector, textToPrint) => {
   const selectedDiv = document.querySelector(selector);
+  if (selectedDiv === null) return;
   selectedDiv.innerHTML = textToPrint;
 }
 
@@ -159,10 +160,10 @@ const articleCardBuilder = (arr) => {
   for (let i = 0; i < arr.length; i++) {
       domString += `
     <div class="col-5 mx-auto">
-    <div class="card mt-3">
+    <div class="card mt-3 testcard">
       <div class="card-body p-2">
         <h5 class="card-title">${arr[i].headline}</h5>
-        <p class="card-text">${arr[i].publishDate}</p>
+        <p class="card-text testCardText">${arr[i].publishDate}</p>
         <img class="card-img-top" src="${arr[i].articleImage}" alt="">
       </div>
     </div>
@@ -179,11 +180,11 @@ const buildProductCard = (arr) => {
   for (let i = 0; i < arr.length; i++) {
       domString += `
     <div class="col-6 col-md-3">
-    <div class="card">
+    <div class="card testcard">
       <div class="card-body p-2">
         <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
         <h5 class="card-title">${arr[i].name}</h5>
-        <p class="card-text">$${arr[i].price}</p>        
+        <p class="card-text testCardText">$${arr[i].price}</p>        
         <p class="card-text">${arr[i].model}</p>
         <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
       </div>
@@ -223,8 +224,7 @@ const clickEvents = () => {
 
 const init = () => {
   buildProductCard(pants01);  
-  //articleCardBuilder(articles);
-  //buildProductCard(pants01);
+  articleCardBuilder(articles);
   clickEvents();
 }
 

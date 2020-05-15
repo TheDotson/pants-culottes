@@ -165,13 +165,30 @@ footer {
   font-family: 'Rye', cursive;
 }
 
-
 .main-container {
   min-height: calc(100vh - 217px);
 }
 
-/* shopping page css below */
+/* text css for site theme */
+.headline {
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+}
 
+.testbody {
+  background-color: #59121F;
+}
+
+.testcard {
+  background-color: #D98F89;
+  font-family: 'Rye', cursive;
+}
+
+.testCardText {
+  font-family: 'Amiri', serif;
+}
+
+  /* shopping page css below */
 .shopHeader {
   text-align: center;
   padding-top: 10px;
