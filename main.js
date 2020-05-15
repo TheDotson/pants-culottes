@@ -56,6 +56,7 @@ const pants01 = [
       [
           {
               color: "Bisque",
+
               url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjqy_G8BxwPDP0rgUXnQAZiN3TdhX4n3N06VFYtTLHMWORuSBw50xZUa245OcOTVEyikwAValJ&usqp=CAc"
           },
 
@@ -160,10 +161,10 @@ const articleCardBuilder = (arr) => {
   for (let i = 0; i < arr.length; i++) {
       domString += `
     <div class="col-5 mx-auto">
-    <div class="card mb-3">
+    <div class="card mt-3 testcard">
       <div class="card-body p-2">
         <h5 class="card-title">${arr[i].headline}</h5>
-        <p class="card-text">${arr[i].publishDate}</p>
+        <p class="card-text testCardText">${arr[i].publishDate}</p>
         <img class="card-img-top" src="${arr[i].articleImage}" alt="">
       </div>
     </div>
@@ -176,21 +177,20 @@ const articleCardBuilder = (arr) => {
 //Build all Product cards
 const buildProductCard = (arr) => {
   domString = '';
-
   for (let i = 0; i < arr.length; i++) {
-      domString += `
-    <div class="col-6 col-md-3">
-    <div class="card">
-      <div class="card-body p-2">
-        <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
-        <h5 class="card-title">${arr[i].name}</h5>
-        <p class="card-text">$${arr[i].price}</p>        
-        <p class="card-text">${arr[i].model}</p>
-        <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
-      </div>
-    </div>
-    </div>
-    `;
+    domString += `
+       <div class="col-6 col-md-3">
+          <div class="card testcard">
+             <div class="card-body p-2">
+                <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
+                <h5 class="card-title">${arr[i].name}</h5>
+                <p class="card-text testCardText">$${arr[i].price}</p>        
+                <p class="card-text">${arr[i].model}</p>
+                <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
+             </div>
+           </div>
+       </div>
+     `;
   }  
   printToDom('#allCards', domString);
 }

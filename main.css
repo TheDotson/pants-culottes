@@ -122,6 +122,7 @@ body {
 footer {
   background-color: #F2E4D8;
   font-family: 'Amiri', serif;
+  height: 140px;
 }
 
 .footer-copyright {
@@ -162,6 +163,29 @@ footer {
   text-align: center;
   padding-top: 10px;
   font-family: 'Rye', cursive;
+}
+
+.main-container {
+  min-height: calc(100vh - 217px);
+}
+
+/* text css for site theme */
+.headline {
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+}
+
+.testbody {
+  background-color: #59121F;
+}
+
+.testcard {
+  background-color: #D98F89;
+  font-family: 'Rye', cursive;
+}
+
+.testCardText {
+  font-family: 'Amiri', serif;
 }
 
 /* shopping page css below */
