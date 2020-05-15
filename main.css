@@ -165,11 +165,11 @@ footer {
   font-family: 'Rye', cursive;
 }
 
-/* text css for site theme */
 .main-container {
   min-height: calc(100vh - 217px);
 }
 
+/* text css for site theme */
 .headline {
   font-family: 'Rye', cursive;
   color: #BF9E39;
