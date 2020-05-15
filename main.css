@@ -163,3 +163,29 @@ footer {
   padding-top: 10px;
   font-family: 'Rye', cursive;
 }
+
+/* shopping page css below */
+
+.shopHeader {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Rye', cursive;
+  color : #BF9E39;
+}
+
+.btnShop {
+  background-color: #59121F;
+  color: white;
+  font-family: 'Amiri', serif;
+}
+
+.btnDetails {
+  background-color: #BF9E39;
+  color: black;
+  font-family: 'Rye', cursive;
+  font-weight: bold;  
+}
+
+.adj {
+  min-height: 330px;
+}

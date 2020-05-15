@@ -43,7 +43,7 @@
     <!-- NavBar End-->
 
     <!-- Main Start here -->
-    <h1>Shopping with Pina Cullotte-a</h1> <!-- CUSTOMIZE THIS FOR YOUR PAGE -->
+    <h1 class="shopHeader">Shopping with Pina Cullotte-a</h1> <!-- CUSTOMIZE THIS FOR YOUR PAGE -->
 
     <!-- YOUR CONTENT GOES HERE-->
 
@@ -51,12 +51,13 @@
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          <button type="button" id="historyCulotte" class="btn btn-danger">Historical</button> 
-          <button type="button" id="fashion" class="btn btn-outline-warning">Fashion</button>
-          <button type="button" id="all" class="btn btn-outline-danger">All Products</button>
+          <button type="button" id="historyCulotte" class="btn btn-danger btnShop">Historical</button> 
+          <button type="button" id="fashion" class="btn btn-outline-warning btnShop">Fashion</button>
+          <button type="button" id="all" class="btn btn-outline-danger btnShop">All Products</button>
         </div>
       </div>
-    </div> 
+    </div>
+    <br> 
 
     <!-- TODO Div for the Check out or the Cart button.
          When click it will show this div and hide the other div -->
@@ -68,6 +69,11 @@
 
     <!-- TODO Div for the Product Cards this will first show in the page when you landing 
         << you will hide this only if the user click on Cart for check out -->
+
+    <div class="container">
+         <div id="allCards" class="row justify-content-md-center"></div>
+    </div>
+          
 
     <!-- Main End here -->
 
