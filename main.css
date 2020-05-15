@@ -168,3 +168,25 @@ footer {
 .main-container {
   min-height: calc(100vh - 217px);
 }
+
+.card-container {
+  margin: 75px auto;
+}
+
+.card {
+  height: 300px;
+  width: 10rem;
+}
+
+.card.card-primary {
+  height: 600px;
+}
+
+.card-img {
+  height: 550px;
+}
+
+.card-img-sm {
+  height: 265px;
+  /* width: 95%; */
+}
