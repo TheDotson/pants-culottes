@@ -393,22 +393,46 @@ const historyCard = (hist) => {
 
 const newsletter = []
 
-const addEmail = () => {
+const addEmail = (event) => {
+  event.preventDefault();
   const boxvalue = 
     {
-      email: document.getElementById('staticEmail2').value,
+      email: document.getElementById('exampleInputEmail1').value,
     }
     newsletter.push(boxvalue);
     console.log(newsletter)
-    // return false;
+}
+
+const sameEmail = (email) => {
+  domString = '';
+
+  for (let i = 0; i < email.length; i++) {
+    domString += `
+
+    `
+  }
 }
 
 
 const clickEvents = () => {
-  document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
-  document.querySelector('#fashion').addEventListener('click', filterModelCulotteEvent);
-  document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
-  document.querySelector('#submitEmail').addEventListener('click', addEmail);
+
+  if (document.querySelector('#historyCulotte')) {
+    document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
+  }
+
+  if (document.querySelector('#fashion')) {
+    document.querySelector('#fashion').addEventListener('click', filterModelCulotteEvent);
+  }
+
+  if (document.querySelector('#all')) {
+    document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
+  }
+  if (document.querySelector('#inputEmail')) {
+    document.querySelector('#inputEmail').addEventListener('click', addEmail);
+  }
+  if (document.querySelector('#inputEmail')) {
+    document.querySelector('#inputEmail').addEventListener('click', sameEmail);
+  }
 }
 
 const init = () => {
