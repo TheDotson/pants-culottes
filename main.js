@@ -3,7 +3,7 @@ console.log("is this thing on?")
 const pants01 = [
   {
       id: 00,
-      name: "Georgette Wide-Leg Pants",
+      name: "Georgette Wide-Leg Pants St John Collection",
       nameD: "St John Collection georgette layered pants",        
       price:150.00,
       model:"History Culotte",
@@ -179,7 +179,7 @@ const buildProductCard = (arr) => {
   domString = '';
   for (let i = 0; i < arr.length; i++) {
     domString += `
-       <div class="col-6 col-md-3">
+       <div class="col-6 col-md-3 mb-3">
           <div class="card testcard">
              <div class="card-body p-2">
                 <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
