@@ -426,6 +426,7 @@ const clickEvents = () => {
 
 const about = [
   {line: 'We are diverse group of Culotte Aficionados that are here to educate the masses on the history of these majestic pants and revel in the recent revival of the Culotte in the modern fashion scene.'},
+  {line: "Piña Culotte-a was created with the idea in mind of being a haven for those willing to experiment with their ensenble."},
   {line: "Here, you'll be amongst like minded fashionistas that share a fervent appreciation for history's greatest style of leg covers."},
   {line: "Whether you are a longtime fan of the split skirt wonder, or this is the first time you're being exposed to the truth of the Culotte, this site should aid in your education, appreciation, and acquisition of everything that is Culotte!"},
 ];
