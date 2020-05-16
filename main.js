@@ -391,9 +391,19 @@ const historyCard = (hist) => {
 }
 
 const clickEvents = () => {
-  document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
-  document.querySelector('#fashion').addEventListener('click', filterModelCulotteEvent);
-  document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
+
+  if (document.querySelector('#historyCulotte')) {
+    document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
+  }
+
+  if (document.querySelector('#fashion')) {
+    document.querySelector('#fashion').addEventListener('click', filterModelCulotteEvent);
+  }
+
+  if (document.querySelector('#all')) {
+    document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
+  }
+
 }
 
 const init = () => {
