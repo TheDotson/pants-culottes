@@ -37,13 +37,13 @@ You should not need to modify nither the navbar nor the footer. Instead, place a
             <a href="index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item border-right px-2">
-            <a class="nav-link" href="#">Shopping</a>
+            <a class="nav-link" href="shopping.html">Shopping</a>
           </li>
           <li class="nav-item border-right px-2">
             <a class="nav-link" href="history.html">History</a>
           </li>
           <li class="nav-item border-right px-2">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="aboutUs.html">About Us</a>
           </li>
           <li class="nav-item px-2">
             <a class="nav-link" href="currentEvents.html">Celebrations</a>

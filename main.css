@@ -159,6 +159,14 @@ footer {
   color: #D98F89;
 }
 
+.about {
+  font-family: 'Amiri', serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: large;
+  color: #D98F89;
+}
+
 .historyHeader {
   text-align: center;
   padding-top: 10px;
@@ -197,7 +205,7 @@ footer {
   max-width: 200px;
 }
 
-/* text css for site theme */
+/* test css for site theme */
 .headline {
   font-family: 'Rye', cursive;
   color: #BF9E39;
@@ -226,9 +234,10 @@ footer {
 }
 
 .btnShop {
-  background-color: #59121F;
-  color: white;
-  font-family: 'Amiri', serif;
+  background-color: #D98F89;
+  color: black;
+  font-family: 'Rye', cursive;
+  width: 150px;
 }
 
 .btnDetails {
@@ -237,6 +246,13 @@ footer {
   font-family: 'Rye', cursive;
   font-weight: bold;
 }
+
+.detailsCard {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* END shopping page css above */
 
 .historyCards {
   display: block;
