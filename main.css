@@ -282,3 +282,11 @@ footer {
 .biker {
   height: 250px;
 }
+
+.newsletter {
+  background-color: #D98F89;
+  width: 750px;
+  height: 150px;
+  display: block;
+  margin-left: 200px;
+}
