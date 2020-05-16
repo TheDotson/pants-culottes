@@ -343,10 +343,25 @@ const historyCard = (hist) => {
     printToDom('#historical', cardString);
   }
 
+
+const newsletter = []
+
+const addEmail = () => {
+  const boxvalue = 
+    {
+      email: document.getElementById('submitEmail').value,
+    }
+    newsletter.push(boxvalue);
+    console.log(newsletter)
+    return false;
+}
+
+
 const clickEvents = () => {
   document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
   document.querySelector('#fashion').addEventListener('click', filterModelCulotteEvent);
   document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
+  document.querySelector('#submitEmail').addEventListener('click', addEmail);
 }
 
 const init = () => {
