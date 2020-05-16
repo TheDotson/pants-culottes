@@ -396,11 +396,11 @@ const newsletter = []
 const addEmail = () => {
   const boxvalue = 
     {
-      email: document.getElementById('submitEmail').value,
+      email: document.getElementById('staticEmail2').value,
     }
     newsletter.push(boxvalue);
     console.log(newsletter)
-    return false;
+    // return false;
 }
 
 
