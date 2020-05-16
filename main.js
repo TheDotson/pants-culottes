@@ -419,11 +419,22 @@ const generateAlert = (alertText, status) => {
   // create the actual alert
   if (status === 'error') {
     // create the alert here with alertText
+    domString += `
+    <div class="alert alert-danger" role="alert">
+      ${text}
+    </div>
+    `
   }
 
   if (status === 'success') {
     // create a successful alert with alertText
+    domString += `
+    <div class="alert alert-success" role="alert">
+      ${text}
+    </div>
+    `
   }
+  printToDom('#emailAlert', domString)
 }
 
 const verifyEmail = (event) => {
@@ -433,31 +444,20 @@ const verifyEmail = (event) => {
   userEmail = document.getElementById('exampleInputEmail1').value;
 
   if (newsletter.includes(userEmail)) {
-    console.log("EMAIL ALREADY THERE");
 
     text = 'Email Already Present';
     generateAlert(text, 'error');
-    domString += `
-    <div class="alert alert-danger" role="alert">
-      ${text}
-    </div>
-    `
+    printToDom('#emailAlert', domString)
+
 
   } else {
-    console.log("NEW EMAIL");
     // push new email to array
     addEmail(userEmail);
 
     // generate a 'welcome' alert
     text = "Welcome to the newsletter!"
     generateAlert(text, 'success');
-    domString += `
-    <div class="alert alert-success" role="alert">
-      ${text}
-    </div>
-    `
   }
-  printToDom('#emailAlert', domString)
   console.log(newsletter);
 }
 
