@@ -416,9 +416,8 @@ const addEmail = (email) => {
 }
 
 const generateAlert = (alertText, status) => {
-  // create the actual alert
-  if (status === 'error') {
-    // create the alert here with alertText
+  let domString = '';
+  if (status === 'error'); 
     domString += `
     <div class="alert alert-danger" role="alert">
       ${text}
@@ -427,7 +426,6 @@ const generateAlert = (alertText, status) => {
   }
 
   if (status === 'success') {
-    // create a successful alert with alertText
     domString += `
     <div class="alert alert-success" role="alert">
       ${text}
@@ -439,7 +437,6 @@ const generateAlert = (alertText, status) => {
 
 const verifyEmail = (event) => {
   event.preventDefault();
-  domString = '';
 
   userEmail = document.getElementById('exampleInputEmail1').value;
 
@@ -451,10 +448,7 @@ const verifyEmail = (event) => {
 
 
   } else {
-    // push new email to array
     addEmail(userEmail);
-
-    // generate a 'welcome' alert
     text = "Welcome to the newsletter!"
     generateAlert(text, 'success');
   }
