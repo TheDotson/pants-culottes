@@ -34,6 +34,9 @@ You should not need to modify nither the navbar nor the footer. Instead, place a
       <div class="container justify-content-center">
         <ul class="navbar-nav">
           <li class="nav-item border-right px-2">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item border-right px-2">
             <a class="nav-link" href="#">Shopping</a>
           </li>
           <li class="nav-item border-right px-2">
