@@ -155,12 +155,15 @@ footer {
   font-family: 'Amiri', serif;
   margin-left: 10px;
   margin-right: 10px;
+  font-size: large;
+  color: #D98F89;
 }
 
 .historyHeader {
   text-align: center;
   padding-top: 10px;
   font-family: 'Rye', cursive;
+  color: #BF9E39;
 }
 
 .main-container {
@@ -239,16 +242,43 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: #D98F89;
 }
 
 .facts {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
   font-family: 'Rye', cursive;
+  color: #BF9E39;
+  padding-bottom: 50px;
 }
 
 .adj {
   min-height: 300px;
   min-height: 330px;
+}
+
+.historyImg {
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.historyTitle {
+  text-align: center;
+  font-family: 'Rye', cursive;
+}
+
+.hist-card {
+  font-family: 'Amiri', serif;
+}
+
+.facts-cards {
+  padding-top: 50px;
+}
+
+.biker {
+  height: 250px;
 }
