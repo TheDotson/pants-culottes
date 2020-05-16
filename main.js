@@ -408,6 +408,54 @@ const historyCard = (hist) => {
   printToDom('#historical', cardString);
 }
 
+
+let newsletter = []
+
+const addEmail = (email) => {
+  newsletter.push(email);
+}
+
+const generateAlert = (alertText, status) => {
+  let domString = '';
+  if (status === 'error'); 
+    domString += `
+    <div class="alert alert-danger" role="alert">
+      ${text}
+    </div>
+    `
+  }
+
+  if (status === 'success') {
+    domString += `
+    <div class="alert alert-success" role="alert">
+      ${text}
+    </div>
+    `
+  }
+  printToDom('#emailAlert', domString)
+}
+
+const verifyEmail = (event) => {
+  event.preventDefault();
+
+  userEmail = document.getElementById('exampleInputEmail1').value;
+
+  if (newsletter.includes(userEmail)) {
+
+    text = 'Email Already Present';
+    generateAlert(text, 'error');
+    printToDom('#emailAlert', domString)
+
+
+  } else {
+    addEmail(userEmail);
+    text = "Welcome to the newsletter!"
+    generateAlert(text, 'success');
+  }
+  console.log(newsletter);
+}
+
+
 const clickEvents = () => {
 
   if (document.querySelector('#historyCulotte')) {
@@ -422,6 +470,9 @@ const clickEvents = () => {
     document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
   }
 
+  if (document.querySelector('#inputEmail')) {
+    document.querySelector('#inputEmail').addEventListener('click', verifyEmail);
+  }
 }
 
 const about = [
