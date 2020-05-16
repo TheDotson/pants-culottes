@@ -209,6 +209,19 @@ footer {
   font-weight: bold;  
 }
 
+.historyCards {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.facts {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-family: 'Rye', cursive;
+}
+
 .adj {
   min-height: 330px;
 }
