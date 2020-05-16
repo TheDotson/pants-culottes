@@ -188,7 +188,8 @@ footer {
   font-family: 'Amiri', serif;
 }
 
-  /* shopping page css below */
+/* shopping page css below */
+
 .shopHeader {
   text-align: center;
   padding-top: 10px;
@@ -223,5 +224,6 @@ footer {
 }
 
 .adj {
+  min-height: 300px;
   min-height: 330px;
 }

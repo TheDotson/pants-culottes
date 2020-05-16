@@ -3,7 +3,7 @@ console.log("is this thing on?")
 const pants01 = [
   {
       id: 00,
-      name: "Georgette Wide-Leg Pants",
+      name: "Georgette Wide-Leg Pants St John Collection",
       nameD: "St John Collection georgette layered pants",        
       price:150.00,
       model:"History Culotte",
@@ -33,11 +33,11 @@ const pants01 = [
       imgUrl:
       [
           {
-              color: "grey",
+              color: "Grey",
               url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcMmej_GtcHOLlhwagZ2HzPqtkoXLrp089HdagzwnI0qszQsBDMLXcqq-4RZjWOrSx2SltJU4&usqp=CAc"
           },
           {
-              color:"light skin",
+              color:"Beige",
               url:"https://img1.g-star.com/product/c_fill,f_auto,h_675,q_80/v1583927558/D17299-C332-B436-Z01W/g-star-raw-high-waist-culotte-sweatpants-pink.jpg"
           }
       ],
@@ -55,7 +55,8 @@ const pants01 = [
       imgUrl:
       [
           {
-              color: "light",
+              color: "Bisque",
+
               url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjqy_G8BxwPDP0rgUXnQAZiN3TdhX4n3N06VFYtTLHMWORuSBw50xZUa245OcOTVEyikwAValJ&usqp=CAc"
           },
 
@@ -74,7 +75,7 @@ const pants01 = [
       imgUrl:
       [
           {
-              color: "Cognac Brown",
+              color: "Maroon",
               url:"https://www1.assets-gap.com/webcontent/0018/546/878/cn18546878.jpg",
           },
           {
@@ -82,7 +83,7 @@ const pants01 = [
               url:"https://www1.assets-gap.com/webcontent/0018/546/959/cn18546959.jpg",
           },
           {
-              color: "Abalone Grey",
+              color: "Bisque",
               url:"https://www1.assets-gap.com/webcontent/0018/563/919/cn18563919.jpg",
           },    
           {
@@ -116,7 +117,7 @@ const pants01 = [
               url:"https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-7-large",
           },    
           {
-              color: "Navy Blue",
+              color: "Navy",
               url:"https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-5-large",
           },                        
       ],
@@ -176,23 +177,104 @@ const articleCardBuilder = (arr) => {
 //Build all Product cards
 const buildProductCard = (arr) => {
   domString = '';
-
   for (let i = 0; i < arr.length; i++) {
-      domString += `
-    <div class="col-6 col-md-3">
-    <div class="card testcard">
-      <div class="card-body p-2">
-        <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
-        <h5 class="card-title">${arr[i].name}</h5>
-        <p class="card-text testCardText">$${arr[i].price}</p>        
-        <p class="card-text">${arr[i].model}</p>
-        <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
-      </div>
-    </div>
-    </div>
-    `;
+    domString += `
+       <div class="col-6 col-md-3 mb-3">
+          <div class="card testcard">
+             <div class="card-body p-2">
+                <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
+                <h5 class="card-title testCardText">${arr[i].name}</h5>
+                <p class="card-text testCardText">$${arr[i].price}</p>        
+                <p class="card-text testCardText">${arr[i].model}</p>
+                <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
+             </div>
+           </div>
+       </div>
+     `;
   }  
   printToDom('#allCards', domString);
+}
+
+// this var below for select imgae and color
+let imgSelected = 0;
+let cardSelected = 0;
+
+// build product card details.
+
+const buildProductDetailcard = (arr,x,s) => {
+  domString = '';
+  for (let i = 0; i < arr.length; i++) {
+      if (i === x){
+          domString += `
+                   <div class="col-md-4">
+                        <img id="imgDetail" src="${arr[i].imgUrl[s].url}" class="card-img" alt="...">
+                   </div>`;
+          domString +=`<div class="col-md-8">`;
+          domString +=`<div class="card-body testCardText">`;
+          domString +=`<h5 class="card-title">${arr[i].name}</h5>`;
+          domString +=`<p class="card-text">${arr[i].nameD}</p>`;
+          domString +=`<p class="card-text">$${arr[i].price}</p>`;
+          domString +=`<p class="card-text">Color: ${arr[i].imgUrl[s].color}</p>`;
+          domString +=`<div class ="row">`;
+          // <input type="radio" name="options" id="option1" autocomplete="off" checked">
+          for (j=0; j< arr[i].imgUrl.length; j++)
+          {            
+            domString +=`
+                     <div class="col-2">
+                        <div class="btn-group btn-group-toggle"  data-toggle="buttons">
+                            <label class="btn btn-secondary active" style = "background-color:${arr[i].imgUrl[j].color};">
+                               <input type="radio" onClick= "changeImgCard(this.id)" name="options" id="${j}" style = "background-color:${arr[i].imgUrl[j].color};" autocomplete="off" checked>
+                            </label>
+                        </div>                        
+                     </div>
+                    `;
+          }          
+          domString +=`</div>`;
+          domString +=`<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
+          domString +=`<h5>Description:</h5>`
+          domString +=`<p class="card-text"><small class="text-muted">${arr[i].disc}</small></p>`;
+          domString +=`</div>`;                                                                                                                                                           
+      }
+  }                  
+  console.log(domString);
+  printToDom('#dCards', domString);
+}
+
+function changeImgCard (clicked) {
+  const tempStudentCollection = [];
+  var x = Number(clicked);
+  imgSelected = x;
+  const myDetails = pants01.filter(mmod => { return mmod.id === x;});
+  console.log(myDetails);
+  //myFunctionShow("details");
+  buildProductDetailcard(pants01,cardSelected,imgSelected);
+}
+
+// function for show hide items.
+function myFunctionShow(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+}
+
+function myFunctionHide(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  }
+}
+
+
+function detailsCard (clicked) {
+  const tempStudentCollection = [];
+  var x = Number(clicked);
+  cardSelected = x;
+  imgSelected = 0;
+  const myDetails = pants01.filter(mmod => { return mmod.id === x;});
+  console.log(myDetails);
+  myFunctionShow("details");
+  buildProductDetailcard(pants01,x,imgSelected);
 }
 
 // Adding and Show by or filter by models for product below:
@@ -200,14 +282,14 @@ const filterModelCulotteEvent = (event) => {
   const buttonID = event.target.id;
   if (buttonID === 'historyCulotte'){
       const history = pants01.filter(mmod => { return mmod.model === "History Culotte";});
-      //myFunctionHide("details");
+      myFunctionHide("details");
       buildProductCard(history);
   } else if (buttonID === 'fashion'){
       const fashion = pants01.filter(mmod => { return mmod.model === "Fashion Culotte";});
-      //myFunctionHide("details");
+      myFunctionHide("details");
       buildProductCard(fashion);
   }else if (buttonID === 'all'){
-      //myFunctionHide("details");
+      myFunctionHide("details");
       buildProductCard(pants01);
   }else {
       console.log("pd excuted!");
