@@ -19,7 +19,7 @@ const pants01 = [{
     nameD: "",
     price: 130.00,
     model: "Fashion Culotte",
-    size: [2, 4, 6],
+    size: [8],
     imgUrl: [{
         color: "Grey",
         url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcMmej_GtcHOLlhwagZ2HzPqtkoXLrp089HdagzwnI0qszQsBDMLXcqq-4RZjWOrSx2SltJU4&usqp=CAc"
@@ -39,7 +39,7 @@ const pants01 = [{
     nameD: "Gucci",
     price: 1500.00,
     model: "Fashion Culotte",
-    size: [2, 4, 6],
+    size: [4, 6],
     imgUrl: [{
         color: "Bisque",
 
@@ -57,7 +57,7 @@ const pants01 = [{
     nameD: "Gucci",
     price: 89.00,
     model: "Fashion Culotte",
-    size: [2, 4, 6],
+    size: [2, 4, 6, 8],
     imgUrl: [{
         color: "Maroon",
         url: "https://www1.assets-gap.com/webcontent/0018/546/878/cn18546878.jpg",
@@ -85,7 +85,7 @@ const pants01 = [{
     nameD: "Summer Women's Skirt Pant Ruffle Palazzo Trouser Boho Wide Leg Loose Skirt Pants",
     price: 20.00,
     model: "Fashion Culotte",
-    size: [2, 4, 6, 8],
+    size: [2, 4, 6, 8, 10],
     imgUrl: [{
         color: "grey",
         url: "https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-2-large",
@@ -228,7 +228,7 @@ const buildProductCard = (arr) => {
           <div class="card testcard">
              <div class="card-body p-2">
                 <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
-                <h5 class="card-title testCardText">${arr[i].name}</h5>
+                <h6 class="card-title">${arr[i].name}</h6>
                 <p class="card-text testCardText">$${arr[i].price}</p>        
                 <p class="card-text testCardText">${arr[i].model}</p>
                 <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
@@ -252,14 +252,14 @@ const buildProductDetailcard = (arr, x, s) => {
     if (i === x) {
       domString += `
                    <div class="col-md-4">
-                        <img id="imgDetail" src="${arr[i].imgUrl[s].url}" class="card-img" alt="...">
+                        <img id="imgDetail" src="${arr[i].imgUrl[s].url}" class="card-img detailsCard" alt="...">
                    </div>`;
       domString += `<div class="col-md-8">`;
-      domString += `<div class="card-body testCardText">`;
+      domString += `<div class="card-body">`;
       domString += `<h5 class="card-title">${arr[i].name}</h5>`;
-      domString += `<p class="card-text">${arr[i].nameD}</p>`;
-      domString += `<p class="card-text">$${arr[i].price}</p>`;
-      domString += `<p class="card-text">Color: ${arr[i].imgUrl[s].color}</p>`;
+      domString += `<h6 class="card-text testCardText">${arr[i].nameD}</h6>`;
+      domString += `<h6 class="card-text testCardText">$${arr[i].price}</h6>`;
+      domString += `<h6 class="card-text testCardText">Color: ${arr[i].imgUrl[s].color}</h6>`;
       domString += `<div class ="row">`;
       // <input type="radio" name="options" id="option1" autocomplete="off" checked">
       for (j = 0; j < arr[i].imgUrl.length; j++) {
@@ -274,9 +274,27 @@ const buildProductDetailcard = (arr, x, s) => {
                     `;
       }
       domString += `</div>`;
-      domString += `<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
-      domString += `<h5>Description:</h5>`
-      domString += `<p class="card-text"><small class="text-muted">${arr[i].disc}</small></p>`;
+      //domString += `<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
+      domString +=`<h6 class="testCardText detailsCard">US SIZE: <span>PLEASE SELECT</span></h6>`;
+      domString +=`<div class ="row">`;
+      for (j=0; j<arr[i].size.length; j++){
+        domString +=`
+             <div class="col-2">
+                 <div class="btn-group btn-group-toggle"  data-toggle="buttons">
+                     <label class="btn btn-secondary active" style = "background-color:Bisque;color:black;">
+                         <input type="radio" onClick= "changeSaveCard(this.id)" name="options" id="${j}"  style = "color:black;" autocomplete="off" checked>${arr[i].size[j]}
+                     </label>
+                 </div>                        
+             </div>
+       `;
+      }
+      domString +=`</div>`;
+      domString +=`<h6 class="card-text testCardText detailsCard">Style: <span>${arr[i].model}</span> </h6>`;
+      domString +=`<h6 class="card-text testCardText">QUANTITY:</h6>`;
+      domString +=`<input type="text" maxlength="2" onClick= "changeSaveCard(this.id)" name="options" id="${j}" class="card-text testCardText" style = "background-color:Bisque;max-width:30px;border-radius:3px;" autocomplete="off" checked>`;
+      domString +=`<a id ="${arr[i].id}" onClick= "addCartCard(this.id)" href="#" class="btn btn-outline-warning float-right btnDetails">Add To Cart</a>`;   
+      domString += `<h6 class="card-text testCardText detailsCard">Description:</h6>`
+      domString += `<p class="card-text testCardText"><small class="text-muted">${arr[i].disc}</small></p>`;
       domString += `</div>`;
     }
   }
