@@ -391,26 +391,44 @@ const historyCard = (hist) => {
 }
 
 
-const newsletter = []
+let newsletter = []
 
-const addEmail = (event) => {
-  event.preventDefault();
-  const boxvalue = 
-    {
-      email: document.getElementById('exampleInputEmail1').value,
-    }
-    newsletter.push(boxvalue);
-    console.log(newsletter)
+const addEmail = (email) => {
+  newsletter.push(email);
 }
 
-const sameEmail = (email) => {
-  domString = '';
-
-  for (let i = 0; i < email.length; i++) {
-    domString += `
-
-    `
+const generateAlert = (alertText, status) => {
+  // create the actual alert
+  if (status === 'error') {
+    // create the alert here with alertText
   }
+
+  if (status === 'success') {
+    // create a successful alert with alertText
+  }
+}
+
+const verifyEmail = (event) => {
+  event.preventDefault();
+
+  userEmail = document.getElementById('exampleInputEmail1').value;
+
+  if (newsletter.includes(userEmail)) {
+    console.log("EMAIL ALREADY THERE");
+
+    text = 'Email Already Present';
+    generateAlert(text, 'error');
+
+  } else {
+    console.log("NEW EMAIL");
+    // push new email to array
+    addEmail(userEmail);
+
+    // generate a 'welcome' alert
+    text = "Welcome to the newsletter!"
+    generateAlert(text, 'success');
+  }
+  console.log(newsletter);
 }
 
 
@@ -427,11 +445,9 @@ const clickEvents = () => {
   if (document.querySelector('#all')) {
     document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
   }
+
   if (document.querySelector('#inputEmail')) {
-    document.querySelector('#inputEmail').addEventListener('click', addEmail);
-  }
-  if (document.querySelector('#inputEmail')) {
-    document.querySelector('#inputEmail').addEventListener('click', sameEmail);
+    document.querySelector('#inputEmail').addEventListener('click', verifyEmail);
   }
 }
 
