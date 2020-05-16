@@ -137,6 +137,20 @@ const printToDom = (selector, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 }
 
+const getImageURLs = (arr) => {
+  imgURLs = [];
+
+  arr.forEach(pants => {
+    pants.imgUrl.forEach(url => {
+      imgURLs.push(url.url);
+    })
+  });
+
+  return imgURLs;
+}
+
+console.log(getImageURLs(pants01));
+
 const articleCardBuilder = (arr) => {
   let domString = '';
 
@@ -202,8 +216,7 @@ const filterModelCulotteEvent = (event) => {
   }
 }
 
-const history = [
-  {
+const history = [{
     imgUrl: 'https://www.traditioninaction.org/Questions/Images/L_005_ancien.jpg',
     altImg: 'French Revolutionaries',
     class: 'revCulottes',
@@ -215,21 +228,21 @@ const history = [
     altImg: 'woman riding a bike in culottes',
     class: 'bikes',
     heading: 'Woman wearing culottes in 1930s.',
-    info: 'Culottes made a come back in womens fashion in the 1930s as it allowed them do more physical things without worry of their skirt lifting.' 
+    info: 'Culottes made a come back in womens fashion in the 1930s as it allowed them do more physical things without worry of their skirt lifting.'
   },
   {
     imgUrl: 'https://i.ebayimg.com/images/g/yBEAAOSwqz9Zwh8Q/s-l1600.jpg',
     altImg: 'japanese male in a hakama',
     class: 'hakama',
     heading: 'Japanese Hakama',
-    info: 'The japanese had their own form of culottes that were used to aid in horseback riding and hide their feet from opponents.' 
+    info: 'The japanese had their own form of culottes that were used to aid in horseback riding and hide their feet from opponents.'
   }
 ]
 
 const historyCard = (hist) => {
   let cardString = '';
 
-  for (let i = 0; i < hist.length; i++ ) {
+  for (let i = 0; i < hist.length; i++) {
     cardString += `
     <div class="col-3 col-md">
       <div class="card ${hist[i].class} historyCards" style="width: 50%;">
@@ -242,8 +255,8 @@ const historyCard = (hist) => {
     </div>  
         `
   }
-    printToDom('#historical', cardString);
-  }
+  printToDom('#historical', cardString);
+}
 
 const clickEvents = () => {
   document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
