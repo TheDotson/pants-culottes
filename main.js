@@ -183,9 +183,9 @@ const buildProductCard = (arr) => {
           <div class="card testcard">
              <div class="card-body p-2">
                 <img class="card-img-top adj" src="${arr[i].imgUrl[0].url}" alt="">
-                <h5 class="card-title">${arr[i].name}</h5>
+                <h5 class="card-title testCardText">${arr[i].name}</h5>
                 <p class="card-text testCardText">$${arr[i].price}</p>        
-                <p class="card-text">${arr[i].model}</p>
+                <p class="card-text testCardText">${arr[i].model}</p>
                 <a id ="${arr[i].id}" onClick= "detailsCard(this.id)" href="#" class="btn btn-outline-warning btnDetails">Details</a>        
              </div>
            </div>
@@ -210,7 +210,7 @@ const buildProductDetailcard = (arr,x,s) => {
                         <img id="imgDetail" src="${arr[i].imgUrl[s].url}" class="card-img" alt="...">
                    </div>`;
           domString +=`<div class="col-md-8">`;
-          domString +=`<div class="card-body">`;
+          domString +=`<div class="card-body testCardText">`;
           domString +=`<h5 class="card-title">${arr[i].name}</h5>`;
           domString +=`<p class="card-text">${arr[i].nameD}</p>`;
           domString +=`<p class="card-text">$${arr[i].price}</p>`;
