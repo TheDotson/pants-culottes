@@ -170,28 +170,28 @@ footer {
   min-height: calc(100vh - 217px);
 }
 
-.card-container {
+.preview-card-container {
   margin: 75px auto;
 }
 
-.card {
+.preview-card {
   height: 300px;
   width: 10rem;
   border: none;
   border-radius: 0;
 }
 
-.card.card-primary {
+.preview-card.card-primary {
   height: 600px;
 }
 
-.card-img {
+.preview-card-img {
   height: 550px;
   border-radius: 10px;
   min-width: 400px;
 }
 
-.card-img-sm {
+.preview-card-img-sm {
   height: 265px;
   border-radius: 10px;
   max-width: 200px;

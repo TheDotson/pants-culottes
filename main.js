@@ -171,9 +171,9 @@ const previewCardBuilder = (arr) => {
     // Create the top row bigger cards
     if (i <= 1) {
       domString += `
-      <div class="card testcard col-12 col-lg-6 card-primary">
+      <div class="card testcard col-12 col-lg-6 card-primary preview-card">
         <div class="card-body mx-auto">
-          <a href="./shopping.html"><img class="card-img" src="${arr[i]}"></a>
+          <a href="./shopping.html"><img class="card-img preview-card-img" src="${arr[i]}"></a>
         </div>
       </div>
       `;
@@ -181,9 +181,9 @@ const previewCardBuilder = (arr) => {
     // Otherwise, we create the smaller cards
     else {
       domString += `
-      <div class="card testcard col-12 col-md-6 col-log-3">
+      <div class="card testcard col-12 col-md-6 col-log-3 preview-card">
         <div class="card-body mx-auto">
-          <a href="./shopping.html"><img class="card-img-sm" src="${arr[i]}"></a>
+          <a href="./shopping.html"><img class="preview-card-img-sm" src="${arr[i]}"></a>
         </div>
       </div>
       `;
@@ -400,8 +400,8 @@ const init = () => {
   buildProductCard(pants01);
   articleCardBuilder(articles);
   historyCard(history);
-  printToDom("#cardContainer", previewCardBuilder(getImageURLs(pants01)));
-  // clickEvents();
+  printToDom("#previewCardContainer", previewCardBuilder(getImageURLs(pants01)));
+  clickEvents();
 }
 
 init();
