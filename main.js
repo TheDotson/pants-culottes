@@ -221,21 +221,24 @@ const history = [
     altImg: 'French Revolutionaries',
     class: 'revCulottes',
     heading: 'French Revolutionaries inbetween 1789-1799',
-    info: 'French revolutionary fighters were called sans-culottes due to the garb they wore.'
+    info: 'French revolutionary fighters were called sans-culottes due to the garb they wore.',
+    imgClass: 'rev'
   },
   {
     imgUrl: 'https://silhouettetrends.files.wordpress.com/2014/04/0a3ce42990e2072e454ee245e38f121e.jpg',
     altImg: 'woman riding a bike in culottes',
     class: 'bikes',
     heading: 'Woman wearing culottes in 1930s.',
-    info: 'Culottes made a come back in womens fashion in the 1930s as it allowed them do more physical things without worry of their skirt lifting.' 
+    info: 'Culottes made a come back in womens fashion in the 1930s as it allowed them do more physical things without worry of their skirt lifting.',
+    imgClass: 'biker'
   },
   {
     imgUrl: 'https://i.ebayimg.com/images/g/yBEAAOSwqz9Zwh8Q/s-l1600.jpg',
     altImg: 'japanese male in a hakama',
     class: 'hakama',
     heading: 'Japanese Hakama',
-    info: 'The japanese had their own form of culottes that were used to aid in horseback riding and hide their feet from opponents.' 
+    info: 'The japanese had their own form of culottes that were used to aid in horseback riding and hide their feet from opponents.',
+    imgClass: 'japan'
   }
 ]
 
@@ -245,11 +248,11 @@ const historyCard = (hist) => {
   for (let i = 0; i < hist.length; i++ ) {
     cardString += `
     <div class="col-3 col-md">
-      <div class="card ${hist[i].class} historyCards" style="width: 50%;">
-        <img class="card-img-top historyImg" src="${hist[i].imgUrl}" alt="${hist[i].altImg}">
+      <div class="card ${hist[i].class} historyCards" style="width: 18em;">
+        <img class="card-img-top historyImg ${hist[i].imgClass}" src="${hist[i].imgUrl}" alt="${hist[i].altImg}">
         <div class="card-body">
-          <h6 class="card-title">${hist[i].heading}</h6>
-          <p class="card-text">${hist[i].info}</p>
+          <h6 class="card-title historyTitle">${hist[i].heading}</h6>
+          <p class="card-text hist-card">${hist[i].info}</p>
         </div>
       </div>
     </div>  
