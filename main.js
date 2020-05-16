@@ -245,12 +245,15 @@ const historyCard = (hist) => {
   for (let i = 0; i < hist.length; i++ ) {
     cardString += `
     <div class="col-3 col-md">
-    <div class="card ${hist[i].class} historyCards" style="width: 50%;">
-      <img class="card-img-top historyImg" src="${hist[i].imgUrl}" alt="${hist[i].altImg}">
-      <div class="card-body">
-        <h6 class="card-title">${hist[i].heading}</h6>
-      <p class="card-text">${hist[i].info}</p>
-      `
+      <div class="card ${hist[i].class} historyCards" style="width: 50%;">
+        <img class="card-img-top historyImg" src="${hist[i].imgUrl}" alt="${hist[i].altImg}">
+        <div class="card-body">
+          <h6 class="card-title">${hist[i].heading}</h6>
+          <p class="card-text">${hist[i].info}</p>
+        </div>
+      </div>
+    </div>  
+        `
   }
     printToDom('#historical', cardString);
   }
