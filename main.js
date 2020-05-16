@@ -496,10 +496,9 @@ const aboutUsBuilder = (arr) => {
   let domString = '';
 
   for (let i = 0; i < arr.length; i++) {
-    domString += ` < p > $ {
-      arr[i].line
-    } < /p>`;
+    domString += `<p>${arr[i].line}</p>`;
   }
+
   printToDom('#aboutUs', domString);
 }
 
