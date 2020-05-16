@@ -1,135 +1,115 @@
-console.log("is this thing on?")
-
-const pants01 = [
-  {
-      id: 00,
-      name: "Georgette Wide-Leg Pants St John Collection",
-      nameD: "St John Collection georgette layered pants",        
-      price:150.00,
-      model:"History Culotte",
-      size: [2,4,6],
-      imgUrl:
-      [
-          {
-              color: "black",
-              url:"https://images.neimanmarcus.com/ca/6/product_assets/B/2/Z/D/Q/NMB2ZDQ_mz.jpg"
-          },
-          {
-              color:"black",
-              url:"hhtp..."
-          }
-      ],
-      disc: "St John Collection georgette layered pants. Banded waist. Wide relaxed-fit legs.",
-      productURL: "https://www.neimanmarcus.com/p/st-john-collection-georgette-wide-leg-pants-prod179760472",
+const pants01 = [{
+    id: 00,
+    name: "Georgette Wide-Leg Pants St John Collection",
+    nameD: "St John Collection georgette layered pants",
+    price: 150.00,
+    model: "History Culotte",
+    size: [2, 4, 6],
+    imgUrl: [{
+      color: "black",
+      url: "https://images.neimanmarcus.com/ca/6/product_assets/B/2/Z/D/Q/NMB2ZDQ_mz.jpg"
+    }],
+    disc: "St John Collection georgette layered pants. Banded waist. Wide relaxed-fit legs.",
+    productURL: "https://www.neimanmarcus.com/p/st-john-collection-georgette-wide-leg-pants-prod179760472",
 
   },
   {
-      id: 01,
-      name: "G-Star RAW Women High Waist Culotte Sweatpants",
-      nameD: "",        
-      price:130.00,
-      model:"Fashion Culotte",
-      size: [2,4,6],
-      imgUrl:
-      [
-          {
-              color: "Grey",
-              url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcMmej_GtcHOLlhwagZ2HzPqtkoXLrp089HdagzwnI0qszQsBDMLXcqq-4RZjWOrSx2SltJU4&usqp=CAc"
-          },
-          {
-              color:"Beige",
-              url:"https://img1.g-star.com/product/c_fill,f_auto,h_675,q_80/v1583927558/D17299-C332-B436-Z01W/g-star-raw-high-waist-culotte-sweatpants-pink.jpg"
-          }
-      ],
-      disc: "A broad elasticated waist offers an integrated drawstring. The High Waist Culotte sweatpants is designed in a wide flared fit and a high waist. Inset pockets are added. The leghems show a raw edge finish.",
-      productURL: "https://www.g-star.com/en_us/shop/women/pants/d17299-c332-b436",
+    id: 01,
+    name: "G-Star RAW Women High Waist Culotte Sweatpants",
+    nameD: "",
+    price: 130.00,
+    model: "Fashion Culotte",
+    size: [2, 4, 6],
+    imgUrl: [{
+        color: "Grey",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcMmej_GtcHOLlhwagZ2HzPqtkoXLrp089HdagzwnI0qszQsBDMLXcqq-4RZjWOrSx2SltJU4&usqp=CAc"
+      },
+      {
+        color: "Beige",
+        url: "https://img1.g-star.com/product/c_fill,f_auto,h_675,q_80/v1583927558/D17299-C332-B436-Z01W/g-star-raw-high-waist-culotte-sweatpants-pink.jpg"
+      }
+    ],
+    disc: "A broad elasticated waist offers an integrated drawstring. The High Waist Culotte sweatpants is designed in a wide flared fit and a high waist. Inset pockets are added. The leghems show a raw edge finish.",
+    productURL: "https://www.g-star.com/en_us/shop/women/pants/d17299-c332-b436",
 
   },
   {
-      id: 02,
-      name: "Floral-Print Silk Twill Cropped Pajama Culottes",
-      nameD: "Gucci",        
-      price:1500.00,
-      model:"Fashion Culotte",
-      size: [2,4,6],
-      imgUrl:
-      [
-          {
-              color: "Bisque",
+    id: 02,
+    name: "Floral-Print Silk Twill Cropped Pajama Culottes",
+    nameD: "Gucci",
+    price: 1500.00,
+    model: "Fashion Culotte",
+    size: [2, 4, 6],
+    imgUrl: [{
+        color: "Bisque",
 
-              url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjqy_G8BxwPDP0rgUXnQAZiN3TdhX4n3N06VFYtTLHMWORuSBw50xZUa245OcOTVEyikwAValJ&usqp=CAc"
-          },
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjqy_G8BxwPDP0rgUXnQAZiN3TdhX4n3N06VFYtTLHMWORuSBw50xZUa245OcOTVEyikwAValJ&usqp=CAc"
+      },
 
-      ],
-      disc: "Floral-print silk twill pajama culottes. Wide legs. Relaxed fit. Knee-length. made in Italy.",
-      productURL: "https://www.neimanmarcus.com/p/gucci-floral-print-silk-twill-cropped-pajama-culottes-prod211240215?utm_source=google_shopping&adpos=&scid=scplpsku179331122&sc_intid=sku179331122&ecid=NMCS__GooglePLA&gclid=Cj0KCQjw2PP1BRCiARIsAEqv-pRhK4SBzlvxuhAyJf3rIR5arB39tLsI9qxcAXFFg558Xic5mQ5836EaAjDAEALw_wcB&gclsrc=aw.ds",
-
-  },          
-  {
-      id: 03,
-      name: "Brooklyn Wide Leg Crop Pant",
-      nameD: "Gucci",        
-      price:89.00,
-      model:"Fashion Culotte",
-      size: [2,4,6],
-      imgUrl:
-      [
-          {
-              color: "Maroon",
-              url:"https://www1.assets-gap.com/webcontent/0018/546/878/cn18546878.jpg",
-          },
-          {
-              color: "Black",
-              url:"https://www1.assets-gap.com/webcontent/0018/546/959/cn18546959.jpg",
-          },
-          {
-              color: "Bisque",
-              url:"https://www1.assets-gap.com/webcontent/0018/563/919/cn18563919.jpg",
-          },    
-          {
-              color: "Navy",
-              url:"https://www1.assets-gap.com/webcontent/0018/717/333/cn18717333.jpg",
-          },                        
-      ],
-      disc: "FIT: Semi-fitted, skims easily over the body with a mid-rise waistband. FOR: Commuting, work and travel. FEEL: Featherweight Stretch™ fabric made with recycled polyester feels silky sleek and light as air. FAVE: Five pockets; 2 front hand, 3 secure zip.",
-      productURL: "https://www.neimanmarcus.com/p/gucci-floral-print-silk-twill-cropped-pajama-culottes-prod211240215?utm_source=google_shopping&adpos=&scid=scplpsku179331122&sc_intid=sku179331122&ecid=NMCS__GooglePLA&gclid=Cj0KCQjw2PP1BRCiARIsAEqv-pRhK4SBzlvxuhAyJf3rIR5arB39tLsI9qxcAXFFg558Xic5mQ5836EaAjDAEALw_wcB&gclsrc=aw.ds",
+    ],
+    disc: "Floral-print silk twill pajama culottes. Wide legs. Relaxed fit. Knee-length. made in Italy.",
+    productURL: "https://www.neimanmarcus.com/p/gucci-floral-print-silk-twill-cropped-pajama-culottes-prod211240215?utm_source=google_shopping&adpos=&scid=scplpsku179331122&sc_intid=sku179331122&ecid=NMCS__GooglePLA&gclid=Cj0KCQjw2PP1BRCiARIsAEqv-pRhK4SBzlvxuhAyJf3rIR5arB39tLsI9qxcAXFFg558Xic5mQ5836EaAjDAEALw_wcB&gclsrc=aw.ds",
 
   },
   {
-      id: 04,
-      name: "Summer Women's Skirt Pant Ruffle Palazzo",
-      nameD: "Summer Women's Skirt Pant Ruffle Palazzo Trouser Boho Wide Leg Loose Skirt Pants",        
-      price:20.00,
-      model:"Fashion Culotte",
-      size: [2,4,6,8],
-      imgUrl:
-      [
-          {
-              color: "grey",
-              url:"https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-2-large",
-          },
-          {
-              color: "Black",
-              url:"https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-6-large",
-          },
-          {
-              color: "red",
-              url:"https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-7-large",
-          },    
-          {
-              color: "Navy",
-              url:"https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-5-large",
-          },                        
-      ],
-      disc: "Summer Women's Skirt Pant Ruffle Palazzo Trouser Boho Wide Leg Loose Skirt Pants.",
-      productURL: "https://www.wish.com/product/5da51719eac01d008ff95556?hide_login_modal=true&from_ad=goog_shopping&_display_country_code=US&_force_currency_code=USD&pid=googleadwords_int&c=%7BcampaignId%7D&ad_cid=5da51719eac01d008ff95556&ad_cc=US&ad_curr=USD&ad_price=20.20&campaign_id=7203534630&gclid=Cj0KCQjw2PP1BRCiARIsAEqv-pQfIP3C7d-oXir5J0FahSbNe1g-BW0fK5lK6kbqaIB38Ycpc_HocrkaAquXEALw_wcB&share=web",
+    id: 03,
+    name: "Brooklyn Wide Leg Crop Pant",
+    nameD: "Gucci",
+    price: 89.00,
+    model: "Fashion Culotte",
+    size: [2, 4, 6],
+    imgUrl: [{
+        color: "Maroon",
+        url: "https://www1.assets-gap.com/webcontent/0018/546/878/cn18546878.jpg",
+      },
+      {
+        color: "Black",
+        url: "https://www1.assets-gap.com/webcontent/0018/546/959/cn18546959.jpg",
+      },
+      {
+        color: "Bisque",
+        url: "https://www1.assets-gap.com/webcontent/0018/563/919/cn18563919.jpg",
+      },
+      {
+        color: "Navy",
+        url: "https://www1.assets-gap.com/webcontent/0018/717/333/cn18717333.jpg",
+      },
+    ],
+    disc: "FIT: Semi-fitted, skims easily over the body with a mid-rise waistband. FOR: Commuting, work and travel. FEEL: Featherweight Stretch™ fabric made with recycled polyester feels silky sleek and light as air. FAVE: Five pockets; 2 front hand, 3 secure zip.",
+    productURL: "https://www.neimanmarcus.com/p/gucci-floral-print-silk-twill-cropped-pajama-culottes-prod211240215?utm_source=google_shopping&adpos=&scid=scplpsku179331122&sc_intid=sku179331122&ecid=NMCS__GooglePLA&gclid=Cj0KCQjw2PP1BRCiARIsAEqv-pRhK4SBzlvxuhAyJf3rIR5arB39tLsI9qxcAXFFg558Xic5mQ5836EaAjDAEALw_wcB&gclsrc=aw.ds",
 
-  },        
-  
+  },
+  {
+    id: 04,
+    name: "Summer Women's Skirt Pant Ruffle Palazzo",
+    nameD: "Summer Women's Skirt Pant Ruffle Palazzo Trouser Boho Wide Leg Loose Skirt Pants",
+    price: 20.00,
+    model: "Fashion Culotte",
+    size: [2, 4, 6, 8],
+    imgUrl: [{
+        color: "grey",
+        url: "https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-2-large",
+      },
+      {
+        color: "Black",
+        url: "https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-6-large",
+      },
+      {
+        color: "red",
+        url: "https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-7-large",
+      },
+      {
+        color: "Navy",
+        url: "https://contestimg.wish.com/api/webimage/5da51719eac01d008ff95556-5-large",
+      },
+    ],
+    disc: "Summer Women's Skirt Pant Ruffle Palazzo Trouser Boho Wide Leg Loose Skirt Pants.",
+    productURL: "https://www.wish.com/product/5da51719eac01d008ff95556?hide_login_modal=true&from_ad=goog_shopping&_display_country_code=US&_force_currency_code=USD&pid=googleadwords_int&c=%7BcampaignId%7D&ad_cid=5da51719eac01d008ff95556&ad_cc=US&ad_curr=USD&ad_price=20.20&campaign_id=7203534630&gclid=Cj0KCQjw2PP1BRCiARIsAEqv-pQfIP3C7d-oXir5J0FahSbNe1g-BW0fK5lK6kbqaIB38Ycpc_HocrkaAquXEALw_wcB&share=web",
+  },
+
 ];
 
-const articles = [
-  {
+const articles = [{
     headline: "J-Law in Flowy Culottes",
     articleImage: 'https://bit.ly/2WKKlbi',
     publishDate: '01/15/20',
@@ -155,11 +135,76 @@ const printToDom = (selector, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 }
 
+const getImageURLs = (arr) => {
+  let imgURLs = [];
+
+  // Get all possible image URLs
+  arr.forEach(pants => {
+    pants.imgUrl.forEach(url => {
+      imgURLs.push(url.url);
+    })
+  });
+
+  // From all possible image URLs
+  // We will select 10 of those for previewing on the homepage
+  let selectedURLs = [];
+
+  for (let i = 0; i < 10; i++) {
+    selectedIndex = Math.floor(Math.random() * imgURLs.length);
+    selectedURLs.push(imgURLs.splice(selectedIndex, 1));
+  }
+
+  return selectedURLs;
+}
+
+const previewCardBuilder = (arr) => {
+
+  let domString = '';
+
+  for (let i = 0; i < 10; i++) {
+
+    // Create a row div where required
+    if (i == 0 || i == 2 || i == 6) {
+      domString += `<div class="row">`;
+    }
+
+    // Create the top row bigger cards
+    if (i <= 1) {
+      domString += `
+      <div class="card testcard col-12 col-lg-6 card-primary preview-card">
+        <div class="card-body mx-auto">
+          <a href="./shopping.html"><img class="card-img preview-card-img" src="${arr[i]}"></a>
+        </div>
+      </div>
+      `;
+    }
+    // Otherwise, we create the smaller cards
+    else {
+      domString += `
+      <div class="card testcard col-12 col-md-6 col-log-3 preview-card">
+        <div class="card-body mx-auto">
+          <a href="./shopping.html"><img class="preview-card-img-sm" src="${arr[i]}"></a>
+        </div>
+      </div>
+      `;
+    }
+
+    // Ends the row div
+    if (i == 1 || i == 5 || i == 9) {
+      domString += `</div>`;
+    }
+  }
+
+  return domString;
+};
+
+
+
 const articleCardBuilder = (arr) => {
   let domString = '';
 
   for (let i = 0; i < arr.length; i++) {
-      domString += `
+    domString += `
     <div class="col-5 mx-auto">
     <div class="card mt-3 testcard">
       <div class="card-body p-2">
@@ -191,7 +236,7 @@ const buildProductCard = (arr) => {
            </div>
        </div>
      `;
-  }  
+  }
   printToDom('#allCards', domString);
 }
 
@@ -201,25 +246,24 @@ let cardSelected = 0;
 
 // build product card details.
 
-const buildProductDetailcard = (arr,x,s) => {
+const buildProductDetailcard = (arr, x, s) => {
   domString = '';
   for (let i = 0; i < arr.length; i++) {
-      if (i === x){
-          domString += `
+    if (i === x) {
+      domString += `
                    <div class="col-md-4">
                         <img id="imgDetail" src="${arr[i].imgUrl[s].url}" class="card-img" alt="...">
                    </div>`;
-          domString +=`<div class="col-md-8">`;
-          domString +=`<div class="card-body testCardText">`;
-          domString +=`<h5 class="card-title">${arr[i].name}</h5>`;
-          domString +=`<p class="card-text">${arr[i].nameD}</p>`;
-          domString +=`<p class="card-text">$${arr[i].price}</p>`;
-          domString +=`<p class="card-text">Color: ${arr[i].imgUrl[s].color}</p>`;
-          domString +=`<div class ="row">`;
-          // <input type="radio" name="options" id="option1" autocomplete="off" checked">
-          for (j=0; j< arr[i].imgUrl.length; j++)
-          {            
-            domString +=`
+      domString += `<div class="col-md-8">`;
+      domString += `<div class="card-body testCardText">`;
+      domString += `<h5 class="card-title">${arr[i].name}</h5>`;
+      domString += `<p class="card-text">${arr[i].nameD}</p>`;
+      domString += `<p class="card-text">$${arr[i].price}</p>`;
+      domString += `<p class="card-text">Color: ${arr[i].imgUrl[s].color}</p>`;
+      domString += `<div class ="row">`;
+      // <input type="radio" name="options" id="option1" autocomplete="off" checked">
+      for (j = 0; j < arr[i].imgUrl.length; j++) {
+        domString += `
                      <div class="col-2">
                         <div class="btn-group btn-group-toggle"  data-toggle="buttons">
                             <label class="btn btn-secondary active" style = "background-color:${arr[i].imgUrl[j].color};">
@@ -228,26 +272,26 @@ const buildProductDetailcard = (arr,x,s) => {
                         </div>                        
                      </div>
                     `;
-          }          
-          domString +=`</div>`;
-          domString +=`<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
-          domString +=`<h5>Description:</h5>`
-          domString +=`<p class="card-text"><small class="text-muted">${arr[i].disc}</small></p>`;
-          domString +=`</div>`;                                                                                                                                                           
       }
-  }                  
-  console.log(domString);
+      domString += `</div>`;
+      domString += `<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
+      domString += `<h5>Description:</h5>`
+      domString += `<p class="card-text"><small class="text-muted">${arr[i].disc}</small></p>`;
+      domString += `</div>`;
+    }
+  }
   printToDom('#dCards', domString);
 }
 
-function changeImgCard (clicked) {
+function changeImgCard(clicked) {
   const tempStudentCollection = [];
   var x = Number(clicked);
   imgSelected = x;
-  const myDetails = pants01.filter(mmod => { return mmod.id === x;});
-  console.log(myDetails);
+  const myDetails = pants01.filter(mmod => {
+    return mmod.id === x;
+  });
   //myFunctionShow("details");
-  buildProductDetailcard(pants01,cardSelected,imgSelected);
+  buildProductDetailcard(pants01, cardSelected, imgSelected);
 }
 
 // function for show hide items.
@@ -266,39 +310,42 @@ function myFunctionHide(id) {
 }
 
 
-function detailsCard (clicked) {
+function detailsCard(clicked) {
   const tempStudentCollection = [];
   var x = Number(clicked);
   cardSelected = x;
   imgSelected = 0;
-  const myDetails = pants01.filter(mmod => { return mmod.id === x;});
-  console.log(myDetails);
+  const myDetails = pants01.filter(mmod => {
+    return mmod.id === x;
+  });
   myFunctionShow("details");
-  buildProductDetailcard(pants01,x,imgSelected);
+  buildProductDetailcard(pants01, x, imgSelected);
 }
 
 // Adding and Show by or filter by models for product below:
 const filterModelCulotteEvent = (event) => {
   const buttonID = event.target.id;
-  if (buttonID === 'historyCulotte'){
-      const history = pants01.filter(mmod => { return mmod.model === "History Culotte";});
-      myFunctionHide("details");
-      buildProductCard(history);
-  } else if (buttonID === 'fashion'){
-      const fashion = pants01.filter(mmod => { return mmod.model === "Fashion Culotte";});
-      myFunctionHide("details");
-      buildProductCard(fashion);
-  }else if (buttonID === 'all'){
-      myFunctionHide("details");
-      buildProductCard(pants01);
-  }else {
-      console.log("pd excuted!");
-      //buildProductDetailcard(pants01);
+  if (buttonID === 'historyCulotte') {
+    const history = pants01.filter(mmod => {
+      return mmod.model === "History Culotte";
+    });
+    myFunctionHide("details");
+    buildProductCard(history);
+  } else if (buttonID === 'fashion') {
+    const fashion = pants01.filter(mmod => {
+      return mmod.model === "Fashion Culotte";
+    });
+    myFunctionHide("details");
+    buildProductCard(fashion);
+  } else if (buttonID === 'all') {
+    myFunctionHide("details");
+    buildProductCard(pants01);
+  } else {
+    //buildProductDetailcard(pants01);
   }
 }
 
-const history = [
-  {
+const history = [{
     imgUrl: 'https://www.traditioninaction.org/Questions/Images/L_005_ancien.jpg',
     altImg: 'French Revolutionaries',
     class: 'revCulottes',
@@ -327,7 +374,7 @@ const history = [
 const historyCard = (hist) => {
   let cardString = '';
 
-  for (let i = 0; i < hist.length; i++ ) {
+  for (let i = 0; i < hist.length; i++) {
     cardString += `
     <div class="col-3 col-md">
       <div class="card ${hist[i].class} historyCards" style="width: 18em;">
@@ -340,8 +387,8 @@ const historyCard = (hist) => {
     </div>  
         `
   }
-    printToDom('#historical', cardString);
-  }
+  printToDom('#historical', cardString);
+}
 
 const clickEvents = () => {
   document.querySelector('#historyCulotte').addEventListener('click', filterModelCulotteEvent);
@@ -350,9 +397,10 @@ const clickEvents = () => {
 }
 
 const init = () => {
-  buildProductCard(pants01);  
+  buildProductCard(pants01);
   articleCardBuilder(articles);
   historyCard(history);
+  printToDom("#previewCardContainer", previewCardBuilder(getImageURLs(pants01)));
   clickEvents();
 }
 
