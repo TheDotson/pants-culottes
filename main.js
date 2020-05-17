@@ -275,10 +275,10 @@ const buildProductDetailcard = (arr, x, s) => {
       }
       domString += `</div>`;
       //domString += `<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
-      domString +=`<h6 class="testCardText detailsCard">US SIZE: <span>PLEASE SELECT</span></h6>`;
-      domString +=`<div class ="row">`;
-      for (j=0; j<arr[i].size.length; j++){
-        domString +=`
+      domString += `<h6 class="testCardText detailsCard">US SIZE: <span>PLEASE SELECT</span></h6>`;
+      domString += `<div class ="row">`;
+      for (j = 0; j < arr[i].size.length; j++) {
+        domString += `
              <div class="col-2">
                  <div class="btn-group btn-group-toggle"  data-toggle="buttons">
                      <label class="btn btn-secondary active" style = "background-color:Bisque;color:black;">
@@ -288,11 +288,11 @@ const buildProductDetailcard = (arr, x, s) => {
              </div>
        `;
       }
-      domString +=`</div>`;
-      domString +=`<h6 class="card-text testCardText detailsCard">Style: <span>${arr[i].model}</span> </h6>`;
-      domString +=`<h6 class="card-text testCardText">QUANTITY:</h6>`;
-      domString +=`<input type="text" maxlength="2" onClick= "changeSaveCard(this.id)" name="options" id="${j}" class="card-text testCardText" style = "background-color:Bisque;max-width:30px;border-radius:3px;" autocomplete="off" checked>`;
-      domString +=`<a id ="${arr[i].id}" onClick= "addCartCard(this.id)" href="#" class="btn btn-outline-warning float-right btnDetails">Add To Cart</a>`;   
+      domString += `</div>`;
+      domString += `<h6 class="card-text testCardText detailsCard">Style: <span>${arr[i].model}</span> </h6>`;
+      domString += `<h6 class="card-text testCardText">QUANTITY:</h6>`;
+      domString += `<input type="text" maxlength="2" onClick= "changeSaveCard(this.id)" name="options" id="${j}" class="card-text testCardText" style = "background-color:Bisque;max-width:30px;border-radius:3px;" autocomplete="off" checked>`;
+      domString += `<a id ="${arr[i].id}" onClick= "addCartCard(this.id)" href="#" class="btn btn-outline-warning float-right btnDetails">Add To Cart</a>`;
       domString += `<h6 class="card-text testCardText detailsCard">Description:</h6>`
       domString += `<p class="card-text testCardText"><small class="text-muted">${arr[i].disc}</small></p>`;
       domString += `</div>`;
@@ -417,21 +417,27 @@ const addEmail = (email) => {
 
 const generateAlert = (alertText, status) => {
   let domString = '';
-  if (status === 'error'); 
-    domString += `
-    <div class="alert alert-danger" role="alert">
-      ${text}
-    </div>
-    `
+
+  if (status === 'error') {
+    domString += `<div class="alert alert-danger alert-dismissible fade show email-alert" role="alert">
+      ${alertText}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      `;
   }
 
   if (status === 'success') {
-    domString += `
-    <div class="alert alert-success" role="alert">
-      ${text}
-    </div>
-    `
+    domString += `<div class="alert alert-success alert-dismissable fade show email-alert" role="alert">
+      ${alertText}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+    `;
   }
+
   printToDom('#emailAlert', domString)
 }
 
@@ -444,15 +450,12 @@ const verifyEmail = (event) => {
 
     text = 'Email Already Present';
     generateAlert(text, 'error');
-    printToDom('#emailAlert', domString)
-
 
   } else {
     addEmail(userEmail);
     text = "Welcome to the newsletter!"
     generateAlert(text, 'success');
   }
-  console.log(newsletter);
 }
 
 
@@ -475,11 +478,18 @@ const clickEvents = () => {
   }
 }
 
-const about = [
-  {line: 'We are diverse group of Culotte Aficionados that are here to educate the masses on the history of these majestic pants and revel in the recent revival of the Culotte in the modern fashion scene.'},
-  {line: "Piña Culotte-a was created with the idea in mind of being a haven for those willing to experiment with their ensenble."},
-  {line: "Here, you'll be amongst like minded fashionistas that share a fervent appreciation for history's greatest style of leg covers."},
-  {line: "Whether you are a longtime fan of the split skirt wonder, or this is the first time you're being exposed to the truth of the Culotte, this site should aid in your education, appreciation, and acquisition of everything that is Culotte!"},
+const about = [{
+    line: 'We are diverse group of Culotte Aficionados that are here to educate the masses on the history of these majestic pants and revel in the recent revival of the Culotte in the modern fashion scene.'
+  },
+  {
+    line: "Piña Culotte-a was created with the idea in mind of being a haven for those willing to experiment with their ensenble."
+  },
+  {
+    line: "Here, you'll be amongst like minded fashionistas that share a fervent appreciation for history's greatest style of leg covers."
+  },
+  {
+    line: "Whether you are a longtime fan of the split skirt wonder, or this is the first time you're being exposed to the truth of the Culotte, this site should aid in your education, appreciation, and acquisition of everything that is Culotte!"
+  },
 ];
 
 const aboutUsBuilder = (arr) => {
@@ -488,6 +498,7 @@ const aboutUsBuilder = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     domString += `<p>${arr[i].line}</p>`;
   }
+
   printToDom('#aboutUs', domString);
 }
 
