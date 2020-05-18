@@ -252,6 +252,30 @@ footer {
   margin-bottom: 10px;
 }
 
+.btnRemove {
+  background-color: #BF9E39;
+  color: black;
+  font-family: 'Rye', cursive;
+  font-weight: bold;
+  margin-bottom: 20px;  
+}
+
+.imgCart {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 50px;   
+}
+
+.cartDetail {   
+  margin-left: -20px;
+}
+
+.adj {
+  min-height: 280px;
+  max-height: 280px;
+  width: 100%;
+}
+
 /* END shopping page css above */
 
 .historyCards {
@@ -266,11 +290,6 @@ footer {
   font-family: 'Rye', cursive;
   color: #BF9E39;
   padding-bottom: 50px;
-}
-
-.adj {
-  min-height: 300px;
-  min-height: 330px;
 }
 
 .historyImg {

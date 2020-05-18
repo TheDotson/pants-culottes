@@ -219,6 +219,8 @@ const articleCardBuilder = (arr) => {
   printToDom('#articleCards', domString);
 }
 
+// *** Shopping Page Start Below ***
+
 //Build all Product cards
 const buildProductCard = (arr) => {
   domString = '';
@@ -240,76 +242,148 @@ const buildProductCard = (arr) => {
   printToDom('#allCards', domString);
 }
 
-// this var below for select imgae and color
+// this variables below for select imgae and color and all apply for shopping page **
 let imgSelected = 0;
 let cardSelected = 0;
+var myDetails;
+const shopCart = [];
+let tempShopCart = [0];
+let validQty = true;
+let deleteItem = [];
+let cartID = 0;
 
 // build product card details.
 
-const buildProductDetailcard = (arr, x, s) => {
+const buildProductDetailcard = (arr,x,s) => {
   domString = '';
-  for (let i = 0; i < arr.length; i++) {
-    if (i === x) {
-      domString += `
-                   <div class="col-md-4">
-                        <img id="imgDetail" src="${arr[i].imgUrl[s].url}" class="card-img detailsCard" alt="...">
-                   </div>`;
-      domString += `<div class="col-md-8">`;
-      domString += `<div class="card-body">`;
-      domString += `<h5 class="card-title">${arr[i].name}</h5>`;
-      domString += `<h6 class="card-text testCardText">${arr[i].nameD}</h6>`;
-      domString += `<h6 class="card-text testCardText">$${arr[i].price}</h6>`;
-      domString += `<h6 class="card-text testCardText">Color: ${arr[i].imgUrl[s].color}</h6>`;
-      domString += `<div class ="row">`;
-      // <input type="radio" name="options" id="option1" autocomplete="off" checked">
-      for (j = 0; j < arr[i].imgUrl.length; j++) {
-        domString += `
-                     <div class="col-2">
-                        <div class="btn-group btn-group-toggle"  data-toggle="buttons">
-                            <label class="btn btn-secondary active" style = "background-color:${arr[i].imgUrl[j].color};">
-                               <input type="radio" onClick= "changeImgCard(this.id)" name="options" id="${j}" style = "background-color:${arr[i].imgUrl[j].color};" autocomplete="off" checked>
-                            </label>
-                        </div>                        
-                     </div>
-                    `;
-      }
-      domString += `</div>`;
-      //domString += `<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>`;
-      domString += `<h6 class="testCardText detailsCard">US SIZE: <span>PLEASE SELECT</span></h6>`;
-      domString += `<div class ="row">`;
-      for (j = 0; j < arr[i].size.length; j++) {
-        domString += `
-             <div class="col-2">
-                 <div class="btn-group btn-group-toggle"  data-toggle="buttons">
+  tempShopCart[0] = ({
+                       id: cartID,
+                       name: arr[0].name,
+                       nameD: arr[0].nameD,
+                       price: arr[0].price,
+                       model: arr[0].model,
+                       size: arr[0].size[0],
+                       imgUrl: arr[0].imgUrl[s].url,
+                       color: arr[0].imgUrl[s].color,
+                       qty: 1,
+                      });
+  domString += `
+               <div class="col-md-4">
+                  <img id="imgDetail" src="${arr[0].imgUrl[s].url}" class="card-img detailsCard" alt="...">
+                </div>`;
+  domString += `<div class="col-md-8 details">`;
+  domString += `<div class="card-body">`;
+  domString += `<h3 class="card-title">${arr[0].name}</h3>`;
+  domString += `<h6 class="card-text testCardText">${arr[0].nameD}</h6>`;
+  domString += `<h6 class="card-text testCardText">$${arr[0].price}</h6>`;
+  domString += `<h6 class="card-text testCardText">Color:<span> ${arr[0].imgUrl[s].color}</span></h6>`;
+  domString += `<div class ="row">`;
+  // this loop to create the color buttons **
+  for (let j=0; j< arr[0].imgUrl.length; j++) {            
+    domString += `
+                 <div class="col-2">
+                    <div class="btn-group btn-group-toggle"  data-toggle="buttons">
+                        <label class="btn btn-secondary active" style = "background-color:${arr[0].imgUrl[j].color};">
+                          <input type="radio" onClick= "changeImgCard(this.id)" name="options" id="${j}" style = "background-color:${arr[0].imgUrl[j].color};" autocomplete="off" checked>
+                        </label>
+                    </div>                        
+                  </div>
+                  `;
+  }          
+  domString += `</div>`;
+  domString += `<h6 class="testCardText detailsCard detailsP">US SIZE: <span class="detailsSpan">PLEASE SELECT</span></h6>`;
+  domString += `<div class ="row">`;
+  // this loop to create the size buttons **
+  for (j = 0; j < arr[0].size.length; j++) {
+    domString += `
+                 <div class="col-2">
+                   <div class="btn-group btn-group-toggle"  data-toggle="buttons">
                      <label class="btn btn-secondary active" style = "background-color:Bisque;color:black;">
-                         <input type="radio" onClick= "changeSaveCard(this.id)" name="options" id="${j}"  style = "color:black;" autocomplete="off" checked>${arr[i].size[j]}
+                       <input type="radio" onClick= "changeSizeCard(this.id)" name="options" id="${j}"  style = "color:black;" autocomplete="off" checked>${arr[0].size[j]}
                      </label>
-                 </div>                        
-             </div>
-       `;
-      }
-      domString += `</div>`;
-      domString += `<h6 class="card-text testCardText detailsCard">Style: <span>${arr[i].model}</span> </h6>`;
-      domString += `<h6 class="card-text testCardText">QUANTITY:</h6>`;
-      domString += `<input type="text" maxlength="2" onClick= "changeSaveCard(this.id)" name="options" id="${j}" class="card-text testCardText" style = "background-color:Bisque;max-width:30px;border-radius:3px;" autocomplete="off" checked>`;
-      domString += `<a id ="${arr[i].id}" onClick= "addCartCard(this.id)" href="#" class="btn btn-outline-warning float-right btnDetails">Add To Cart</a>`;
-      domString += `<h6 class="card-text testCardText detailsCard">Description:</h6>`
-      domString += `<p class="card-text testCardText"><small class="text-muted">${arr[i].disc}</small></p>`;
-      domString += `</div>`;
-    }
+                    </div>                        
+                 </div>
+                 `;
   }
+  domString += `</div>`;
+  domString += `<h6 class="card-text testCardText detailsCard">Style: <span>${arr[0].model}</span> </h6>`;
+  domString += `<h6 class="card-text testCardText">QUANTITY:</h6>`;
+  domString += `<a id ="${arr[0].id}" onClick= "addToCart(this.id)" href="#" class="btn btn-outline-warning float-right btnDetails">Add To Cart</a>`;
+  domString += `<input type="text" maxlength="2" onchange="changeSaveCard(this.value)" value = "1" name="options" class="card-text testCardText" style = "background-color:Bisque;max-width:30px;border-radius:3px;" autocomplete="off" checked>`;
+  domString += `<p class ="card-text testCardText" style="color:red;" id="demo"></p>`;
+  domString += `<h6 class="card-text testCardText detailsCard">Description:</h6>`;
+  domString += `<p class="card-text testCardText"><small class="text-muted">${arr[0].disc}</small></p>`;
+  domString += `</div>`;                                                                                                                                                           
   printToDom('#dCards', domString);
 }
 
+
+// To build Cart Items **
+const buildCartItems = (arr) => {
+  domString = '';
+  //console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i].imgUrl);
+    domString += `
+                 <div id="cams" class="row justify-content-md-center testcard mb-3 cartSection">
+                   <div class="col-md-1 mb-3 cartSection">
+                     <a id ="${arr[i].name}" onClick= "detailsCartCard(this.id)" href="#" ><img src="${arr[i].imgUrl}" class="card-img imgCart" alt="..."></a>                    
+                   </div>
+                   <div class="col-md-11 cartDetail">
+                     <div class="card-body">
+                       <h5 class="card-title testCardText">${arr[i].name}</h5>
+                       <lu class="card-text testCardText" >
+                         <li>Price: $${arr[i].price}</li>
+                         <li>Color:<span> ${arr[i].color}</span></li>
+                         <li>Size: ${arr[i].size}</li>
+                         <li>Quantity: ${arr[i].qty}</li>
+                       </lu>          
+                     </div>
+                     <a id ="${arr[i].id}" onClick= "removeItem(this.id)" href="#" class="btn btn-outline-warning float-right btnRemove">Remove</a>
+                   </div>                  
+                 </div>
+                 `;    
+  }                  
+  //console.log(domString);
+  printToDom('#cartItems', domString);
+}
+
+// Validate the input for the quantity and also apply the change **
+function changeSaveCard(val) {
+  var x, text;
+  x = val;
+  if (isNaN(x) || x < 1 || x > 99) {
+    text = "Input not valid! Please your inpot a number between 1 to 99";
+    validQty = false;
+    document.getElementById("demo").innerHTML = text;  
+  } else {
+    validQty = true;
+    text = "";
+    document.getElementById("demo").innerHTML = text;  
+    tempShopCart[0].qty = val;
+    console.log(tempShopCart[0].qty);
+  }  
+  return;
+}
+
+// Change the image for the details card if the user select diffrent color if the picture available **
 function changeImgCard(clicked) {
-  const tempStudentCollection = [];
+  validQty = true;
   var x = Number(clicked);
   imgSelected = x;
-  const myDetails = pants01.filter(mmod => {
-    return mmod.id === x;
-  });
-  //myFunctionShow("details");
-  buildProductDetailcard(pants01, cardSelected, imgSelected);
+  console.log(myDetails);
+  cardSelected = 0;
+  //tempShopCart[0].imgUrl = myDetails[0].imgUrl[imgSelected].url;
+  //tempShopCart[0].color = myDetails[0].imgUrl[imgSelected].color;
+  buildProductDetailcard(myDetails,cardSelected,imgSelected);
+}
+
+// function for the apply and store the changed size to the temp obj **
+function changeSizeCard (clicked) {
+  validQty = true;
+  var x = Number(clicked); // to convert string to number!!
+  tempShopCart[0].size = myDetails[0].size[x];
+  return;
 }
 
 // function for show hide items.
@@ -327,20 +401,94 @@ function myFunctionHide(id) {
   }
 }
 
-
+// This is function to filter and find the correct card then build card details **
 function detailsCard(clicked) {
-  const tempStudentCollection = [];
+  validQty = true;
+  console.log("this is type of number and it is ", clicked);
   var x = Number(clicked);
+  myDetails = (pants01.filter(mmod => { return mmod.id === x;}));
   cardSelected = x;
   imgSelected = 0;
-  const myDetails = pants01.filter(mmod => {
-    return mmod.id === x;
-  });
+  console.log("This is myDetails", myDetails[0]);
   myFunctionShow("details");
-  buildProductDetailcard(pants01, x, imgSelected);
+  buildProductDetailcard(myDetails, x, imgSelected);
 }
 
-// Adding and Show by or filter by models for product below:
+
+// Add selected item to the cart
+function addToCart (clicked) {
+  var x = Number(clicked);
+  //var q = document.getElementById("qty").value;
+  //console.log(q);
+  var text = '';    
+  console.log("this add to cart",tempShopCart[0].qty);
+  console.log(shopCart);
+  if (validQty === true) {
+    //console.log("this qty value: ", shopCart[shopCart.length-1].qty);
+    document.getElementById("demo").innerHTML = text;
+    shopCart.push(tempShopCart[0]);
+    cartID++;
+    tempShopCart[0] = ({
+      id: cartID,
+      name: myDetails[0].name,
+      nameD: myDetails[0].nameD,
+      price: myDetails[0].price,
+      model: myDetails[0].model,
+      size: myDetails[0].size[0],
+      imgUrl: myDetails[0].imgUrl[imgSelected].url,
+      color: myDetails[0].imgUrl[imgSelected].color,
+      qty: 1,
+     });
+  }
+  console.log("this qty before that value: ", shopCart[shopCart.length-2].qty);
+  return;
+}
+
+// Show the details for the item added to the cart
+function detailsCartCard (clicked) {
+  console.log("this is type of string and it is ", clicked);
+  myDetails = (pants01.filter(mmod => { return mmod.name === clicked;}));
+  myFunctionHide("checkoutCart");
+  var x = 0;
+  imgSelected = 0;
+  console.log("This is myDetails", myDetails[0]);
+  myFunctionShow("details");    
+  buildProductDetailcard(myDetails,x,imgSelected);
+}
+
+// Event to show the Cart Items
+const showCartItems = (event) => {
+  myFunctionHide("details");
+  myFunctionShow("checkoutCart");
+  buildCartItems(shopCart);
+}
+
+
+// Remove Item from the cart -- There will be later add calculation for the total **
+function removeItem(clicked){
+  console.log(clicked);
+  console.log("access to remove item");  
+  var x = Number(clicked);
+  for (i = 0; i < shopCart.length; i++) {
+    if (x === shopCart[i].id) {
+      var find = i;
+    }
+  }
+  console.log(find);
+  console.log("this lenght ",shopCart.length);
+  if (shopCart.length === 1){
+    shopCart.pop();
+    //cartID = 0;
+  } else {
+    shopCart.splice(find, 1)[0];
+  }
+  
+  console.log("this shop cart", shopCart);
+  buildCartItems(shopCart);
+}
+
+
+// Click on Cart buttons to show the Cart Details. Also, you can checkout there.**
 const filterModelCulotteEvent = (event) => {
   const buttonID = event.target.id;
   if (buttonID === 'historyCulotte') {
@@ -348,20 +496,25 @@ const filterModelCulotteEvent = (event) => {
       return mmod.model === "History Culotte";
     });
     myFunctionHide("details");
+    myFunctionHide("checkoutCart");
     buildProductCard(history);
   } else if (buttonID === 'fashion') {
     const fashion = pants01.filter(mmod => {
       return mmod.model === "Fashion Culotte";
     });
     myFunctionHide("details");
+    myFunctionHide("checkoutCart");
     buildProductCard(fashion);
   } else if (buttonID === 'all') {
     myFunctionHide("details");
+    myFunctionHide("checkoutCart");
     buildProductCard(pants01);
   } else {
     //buildProductDetailcard(pants01);
   }
 }
+
+// *** End Shopping Page JS *** 
 
 const history = [{
     imgUrl: 'https://www.traditioninaction.org/Questions/Images/L_005_ancien.jpg',
@@ -472,6 +625,10 @@ const clickEvents = () => {
   if (document.querySelector('#all')) {
     document.querySelector('#all').addEventListener('click', filterModelCulotteEvent);
   }
+
+  if (document.querySelector('#cart')) {
+    document.querySelector('#cart').addEventListener('click', showCartItems);
+  }  
 
   if (document.querySelector('#inputEmail')) {
     document.querySelector('#inputEmail').addEventListener('click', verifyEmail);
