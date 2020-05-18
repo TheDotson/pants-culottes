@@ -353,7 +353,7 @@ function changeSaveCard(val) {
   var x, text;
   x = val;
   if (isNaN(x) || x < 1 || x > 99) {
-    text = "Input not valid! Please your inpot a number between 1 to 99";
+    text = "Input not valid! Please input a number between 1 to 99";
     validQty = false;
     document.getElementById("demo").innerHTML = text;  
   } else {
