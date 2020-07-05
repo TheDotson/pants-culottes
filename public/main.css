@@ -1,0 +1,371 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/********* Simple or original overlay *******/
+/* Main container */
+.overlay-image {
+  position: relative;
+  height: calc(95vh - 56px);
+}
+
+/* Original image */
+.overlay-image .image {
+  display: block;
+  height: calc(95vh - 56px);
+  opacity: 0.25;
+}
+
+/* Original text overlay */
+.overlay-image .text {
+  color: #BF9E39;
+  font-size: 80px;
+  text-shadow: 2px 2px 2px #FFF;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-family: 'Rye', cursive;
+}
+
+.overlay-image .tagline {
+  color: #F2E4D8;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  font-family: 'Amiri', serif;
+}
+
+@media screen and (max-width: 1280px) {
+  .overlay-image .text {
+    font-size: 60px;
+  }
+
+  .overlay-image .tagline {
+    font-size: 30px;
+    top: 45%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .overlay-image .text {
+    font-size: 50px;
+  }
+
+  .overlay-image .tagline {
+    font-size: 25px;
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .overlay-image .text {
+    font-size: 45px;
+  }
+
+  .overlay-image .tagline {
+    font-size: 20px;
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .overlay-image .text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .overlay-image .tagline {
+    top: 60%;
+  }
+}
+
+@media screen and (max-height: 575px) {
+  .overlay-image .text {
+    top: 10%;
+  }
+
+  .overlay-image .tagline {
+    top: 60%;
+  }
+}
+
+/*******************************************/
+
+.navbar {
+  background-color: #F2E4D8;
+  font-family: 'Amiri', serif;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.nav-item.border-right {
+  border-color: #D98F89 !important;
+}
+
+footer {
+  background-color: #F2E4D8;
+  font-family: 'Amiri', serif;
+  height: 140px;
+}
+
+.footer-copyright {
+  background-color: #D98F89;
+}
+
+.historyHead {
+  height: 400px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  padding-top: 25px;
+}
+
+.firstCulottes {
+  height: 200px;
+  float: right;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.tennisPlayer {
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.historyP {
+  font-family: 'Amiri', serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: large;
+  color: #D98F89;
+}
+
+.about {
+  font-family: 'Amiri', serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: large;
+  color: #D98F89;
+}
+
+.historyHeader {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+}
+
+.main-container {
+  min-height: calc(100vh - 217px);
+}
+
+.preview-card-container {
+  margin: 75px auto;
+}
+
+.preview-card {
+  height: 300px;
+  width: 10rem;
+  border: none;
+  border-radius: 0;
+}
+
+.preview-card.card-primary {
+  height: 600px;
+}
+
+.preview-card-img {
+  height: 550px;
+  border-radius: 10px;
+  min-width: 400px;
+}
+
+.preview-card-img-sm {
+  height: 265px;
+  border-radius: 10px;
+  max-width: 200px;
+}
+
+/* test css for site theme */
+.headline {
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+}
+
+.testbody {
+  background-color: #59121F;
+}
+
+.testcard {
+  background-color: #D98F89;
+  font-family: 'Rye', cursive;
+}
+
+.testCardText {
+  font-family: 'Amiri', serif;
+}
+
+/* shopping page css below */
+
+.shopHeader {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+}
+
+.btnShop {
+  background-color: #D98F89;
+  color: black;
+  font-family: 'Rye', cursive;
+  width: 150px;
+}
+
+.btnDetails {
+  background-color: #BF9E39;
+  color: black;
+  font-family: 'Rye', cursive;
+  font-weight: bold;
+}
+
+.detailsCard {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btnRemove {
+  background-color: #BF9E39;
+  color: black;
+  font-family: 'Rye', cursive;
+  font-weight: bold;
+  margin-bottom: 20px;  
+}
+
+.imgCart {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 50px;   
+}
+
+.cartDetail {   
+  margin-left: -20px;
+}
+
+.adj {
+  min-height: 280px;
+  max-height: 280px;
+  width: 100%;
+}
+
+/* END shopping page css above */
+
+.historyCards {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #D98F89;
+}
+
+.facts {
+  text-align: center;
+  font-family: 'Rye', cursive;
+  color: #BF9E39;
+  padding-bottom: 50px;
+}
+
+.historyImg {
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.historyTitle {
+  text-align: center;
+  font-family: 'Rye', cursive;
+}
+
+.hist-card {
+  font-family: 'Amiri', serif;
+}
+
+.facts-cards {
+  padding-top: 50px;
+}
+
+.biker {
+  height: 250px;
+}
+
+.newsletter {
+  background-color: #D98F89;
+  width: 750px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+}
+
+.newsletter-head {
+  text-align: center;
+  font-family: 'Rye', cursive;
+}
+
+.form-box {
+  width: 100%;
+  height: 200px;
+}
+
+.input-box {
+  width: auto;
+  margin: 100px;
+}
+
+.submitButton {
+  background-color: #59121F;
+  color: #BF9E39;
+  font-family: 'Rye', cursive;
+  width: 150px;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  background-color: rgba(89, 18, 31, 0.65);
+  color: #BF9E39;
+}
+
+.email-label {
+  font-family: 'Amiri', serif;
+}
+
+.email-alert {
+  border-radius: 0px;
+}
+
+.alerts {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
