@@ -4,7 +4,7 @@
 This was a group project that tasked us with creating a site about pants.
 
 ## Screenshots
-![Main View]()
+![Main View](https://github.com/TheDotson/pants-culottes/blob/master/screenshots/Screen%20Shot%202020-07-11%20at%203.01.01%20PM.png?raw=true)
 
 ## Dev Notes
 Below is an HTML skeleton we developed as a group to make sure all pages followed a uniform structure for CSS/design purposes.
