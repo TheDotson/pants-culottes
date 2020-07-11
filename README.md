@@ -1,5 +1,14 @@
 # pants-coulottes
 
+# About
+This was a group project that tasked us with creating a site about pants.
+
+## Screenshots
+![Main View]()
+
+## Dev Notes
+Below is an HTML skeleton we developed as a group to make sure all pages followed a uniform structure for CSS/design purposes.
+
 ## HTML Skeleton Example with Navbar and Footer
 
 Below is our skeleton page that should be used for the initial HTML pages. This skeleton includes the navbar and footer elements, along with a starting `h1` tag for content on the page.
